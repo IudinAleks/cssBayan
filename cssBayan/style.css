@@ -11,6 +11,19 @@
     }
 }
 
+@-webkit-keyframes re-appear {
+    0% {
+        width: 40%;
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+        scale: 0;
+    }
+}
+
 .container {
     margin: auto;
     width: 60vw;
@@ -72,10 +85,12 @@
 }
 
 .meme__img {
-    display: none;
+    display: block;
+    animation-name: re-appear;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
     margin: auto;
     margin-top: 1.2rem;
-    width: 40%;
 }
 
 .meme__radio-input:checked ~ .meme__wrap .meme__icon {
@@ -192,7 +207,6 @@
 
     .meme__img {
         margin-top: 0.5rem;
-        width: 80%;
     }
 
     @-webkit-keyframes appear {
@@ -205,6 +219,19 @@
             width: 80%;
             opacity: 1;
             scale: 1;
+        }
+    }
+
+    @-webkit-keyframes re-appear {
+        0% {
+            width: 80%;
+            opacity: 1;
+            scale: 1;
+        }
+        100% {
+            width: 0;
+            opacity: 0;
+            scale: 0;
         }
     }
 }
@@ -240,7 +267,6 @@
     }
 
     .meme__img {
-        width: 100%;
         margin-top: 0.2rem;
     }
 
@@ -254,6 +280,19 @@
             width: 100%;
             opacity: 1;
             scale: 1;
+        }
+    }
+
+    @-webkit-keyframes re-appear {
+        0% {
+            width: 100%;
+            opacity: 1;
+            scale: 1;
+        }
+        100% {
+            width: 0;
+            opacity: 0;
+            scale: 0;
         }
     }
 }
