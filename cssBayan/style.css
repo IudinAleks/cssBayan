@@ -1,29 +1,3 @@
-@-webkit-keyframes appear {
-    0% {
-        width: 0;
-        opacity: 0.2;
-        scale: 0;
-    }
-    100% {
-        width: 40%;
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@-webkit-keyframes re-appear {
-    0% {
-        width: 40%;
-        opacity: 1;
-        scale: 1;
-    }
-    100% {
-        width: 0;
-        opacity: 0;
-        scale: 0;
-    }
-}
-
 .container {
     margin: auto;
     width: 60vw;
@@ -86,11 +60,11 @@
 
 .meme__img {
     display: block;
-    animation-name: re-appear;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
     margin: auto;
     margin-top: 1.2rem;
+    width: 0;
+    opacity: 0;
+    transition: all 0.5s ease-out;
 }
 
 .meme__radio-input:checked ~ .meme__wrap .meme__icon {
@@ -99,10 +73,8 @@
 }
 
 .meme__radio-input:checked ~ label .meme__img {
-    display: block;
-    animation-name: appear;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
+    width: 40%;
+    opacity: 1;
 }
 
 .meme__radio-input:checked ~ .meme__wrap > .meme__title {
@@ -153,10 +125,8 @@
     }
 
     .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img {
-        display: block;
-        animation-name: appear;
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
+        width: 40%;
+        opacity: 1;
     }
 }
 
@@ -209,30 +179,9 @@
         margin-top: 0.5rem;
     }
 
-    @-webkit-keyframes appear {
-        0% {
-            width: 0;
-            opacity: 0.2;
-            scale: 0;
-        }
-        100% {
-            width: 80%;
-            opacity: 1;
-            scale: 1;
-        }
-    }
-
-    @-webkit-keyframes re-appear {
-        0% {
-            width: 80%;
-            opacity: 1;
-            scale: 1;
-        }
-        100% {
-            width: 0;
-            opacity: 0;
-            scale: 0;
-        }
+    .meme__radio-input:checked ~ label .meme__img,
+    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img{
+        width: 60%;
     }
 }
 
@@ -270,29 +219,8 @@
         margin-top: 0.2rem;
     }
 
-    @-webkit-keyframes appear {
-        0% {
-            width: 0;
-            opacity: 0.2;
-            scale: 0;
-        }
-        100% {
-            width: 100%;
-            opacity: 1;
-            scale: 1;
-        }
-    }
-
-    @-webkit-keyframes re-appear {
-        0% {
-            width: 100%;
-            opacity: 1;
-            scale: 1;
-        }
-        100% {
-            width: 0;
-            opacity: 0;
-            scale: 0;
-        }
+    .meme__radio-input:checked ~ label .meme__img,
+    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img{
+        width: 80%;
     }
 }
