@@ -53,10 +53,9 @@
 }
 
 .meme__icon {
-    opacity: 0;
+    opacity: 1;
     width: 1.5rem;
     height: 1.5rem;
-    transition: all 0.2s ease-in;
 }
 
 .meme__img {
@@ -95,6 +94,12 @@
 }
 
 @media (hover: hover) {
+    .meme__icon {
+        opacity: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.2s ease-in;
+    }
 
     .meme:hover {
         cursor: pointer;
@@ -175,7 +180,7 @@
     }
 
     .meme__radio-input:checked ~ label .meme__img,
-    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img{
+    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img {
         width: 60%;
     }
 }
@@ -215,7 +220,7 @@
     }
 
     .meme__radio-input:checked ~ label .meme__img,
-    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img{
+    .meme:hover > .meme__radio-input:not(:checked) ~ label .meme__img {
         width: 80%;
     }
 }
