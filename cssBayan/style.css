@@ -53,9 +53,10 @@
 }
 
 .meme__icon {
-    opacity: 1;
+    opacity: 0;
     width: 1.5rem;
     height: 1.5rem;
+    transition: all 0.2s ease-in;
 }
 
 .meme__img {
@@ -94,12 +95,6 @@
 }
 
 @media (hover: hover) {
-    .meme__icon {
-        opacity: 0;
-        width: 1.5rem;
-        height: 1.5rem;
-        transition: all 0.2s ease-in;
-    }
 
     .meme:hover {
         cursor: pointer;
